@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kinemon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="img/icone_platforme_transparent_petit.png">
+</head>
+<body>
+	<header>      
+        <nav>
+            <a href="index.html"><img src="img/icone_platforme_transparent_petit.png" style="width: 75px; height: 75px; margin-top: 10px; margin-left: 100px;"></a>
+            
+            <ul>
+                <li>
+                    <a href="index.html" class="btn">HOME</a>
+                </li>
+                
+                <li>    
+                    <a href="nos_jeux.html" class="btn">GAMES</a>
+
+                </li>         
+                
+                <li>
+                    <a href="lien vers mediafire" class="btn">DOWNLOAD</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fond premier -->
+    <div id="haut_bg" >
+        <div class="bg" style="z-index: 1" class="bg1">
+            <img src="img/background_accueil_samourai_war.PNG" style="top: 0;left: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="logo" >
+            <h1>Samouraï War</h1>
+            <a href="https://www.dropbox.com/sh/z9sjjb8zm7xpowl/AADdtV-H6pm-KBjTcrby2JWBa?dl=0" target="_BLANK"><button class="download" type="button">DOWNLOAD</button></a>
+        </div>
+    </div>
+    <!-- Le jeu -->
+    <div class="container">
+        <div style="text-align: center; width: 50%;">
+            <h2 style="font-size: 50px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 70px;">Le Jeu :</h2>
+            <p style="font-size: 22px; text-align: center; float: left; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-left: 50px; padding-top: 17%;">Samouraï War est un jeu
+                 en 2D développé sur Python avec le module Pygame. Dans ce jeu, on va pouvoir contrôler un petit samouraï qui va pouvoir aller de droite à gauche, 
+                 pouvant jeter des shuriken pour se protégerdes vagues qu'il subira et qui seront de plus en plus dures en fonction du temps. <br>Un vrai <strong>challenge</strong> !</p>
+        </div>
+        
+        <div>
+            <img src="img/accueil_samourai_war.PNG" style="height: 400px; width: 650px; top: 0; padding-top: 100px;"/>
+        </div>
+    </div>
+    <!-- Les vagues -->
+    <div class="uncontainer">        
+        <div style="width: 50%;">
+            <img src="jspasactif.png" width="650" height="400" id="masuperimage" />
+ 
+            <SCRIPT language="JavaScript" type="text/javascript">
+            
+                // Un tableau qui va contenir toutes tes images.
+                var images = new Array();
+                images.push("img/vague1_samourai_war.PNG");
+                images.push("img/vague3_samourai_war.PNG");
+                images.push("img/vague6_samourai_war.PNG");
+                
+                var pointeur = 0;
+                
+                function ChangerImage(){
+                document.getElementById("masuperimage").src = images[pointeur];
+                
+                if(pointeur < images.length - 1){
+                pointeur++;
+                }
+                else{
+                pointeur = 0;
+                }
+                
+                setTimeout("ChangerImage()", 2000)
+                }
+                
+                // Charge la fonction
+                window.onload = function(){
+                ChangerImage();
+                }
+            </SCRIPT>
+        </div>
+        <div style="text-align: center; width: 50%; float: right; padding-right: 150px;">
+            <h2 style="font-size: 50px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 70px; ">Les Vagues :</h2>
+            <p style="font-size: 22px; text-align: center; float: left; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-left: 50px; padding-top: 12%;">Le jeu s'adapte au niveau du 
+            joueur. Il est composé de différentes vagues, qui peuvent aller jusqu'à l'infini, selon le niveau du joueur ! C'est donc un jeu sans limite ... Le joueur
+            sera lors de ces différents vagues confrontés à différents monstres, boss qui au fur et à mesure des vagues auront plus de vie. A chaque fin de vague,
+            une pluie de météorite se déclenche. Elle deviendra également plus dure selon les vagues.</p>
+        </div>
+    </div>
+    <!-- Les monstres -->
+    <div class="container">
+        <div style="text-align: center; width: 50%;">
+            <h2 style="font-size: 50px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 100px;">Les différents monstres :</h2>
+            <p style="font-size: 22px; text-align: center; float: left; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-left: 100px; padding-top: 15%;">Pour les vagues 1 et 2, il y a tout d'abord le fameux
+            goblin, ayant 20 pv, ils ne seront pas très puissants, juste de quoi se mettre en jambe.<br> Ensuite vient les fantômes, 30 pv et plus nombreux, ils seront présents
+            de la vague 3 à 5, toujours s'en méfier !<br> Les plus présents vont alors les momies, elles ont 40 pv, apparaissent en nombres conséquents selon les vagues,
+            redoutable !<br> Puis le monstre qui sert de "Boss", le colosse, 70 pv, gros bestiau, il apparait chaque vague à partir de la 2nd.</p>
+        </div>
+        
+        <div class="monster">
+            <img src="img/goblin.png">
+            <img src="img/fantome.png" style="width: 35%;"/>
+            <br>
+            <img src="img/mummy.png">
+            <img src="img/colosse.png">
+        </div>
+    </div>
+    <!-- Bas de page -->
+    <hr class="barre">
+    <footer>
+        <div class="row" style="width: 100%;">
+            <div class="Games" style="width: 50%;">
+                <h3>GAMES : </h3>
+                <a href="Samourai_war.html" target="BLANK">Samouraï War</a> <br>
+                <a href="Samourai_Escape.html" target="_BLANK">Samouraï Escape</a>
+            </div>
+            <div class="Contact" style="width: 50%;">
+                <h3>CONTACT : </h3>
+                <a href="img/Contact.png" target="_BLANK">Discord & e-mail</a>
+            </div>
+        </div>
+    <p>
+        Copyright &copy; KINEMON | 2020 - 2021 | All Right Reserved
+    </p>
+</footer>
+</body>
+</html>
