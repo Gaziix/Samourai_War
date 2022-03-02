@@ -1,6 +1,12 @@
 # Samouraï-War
 A 2D game where you have to shoot monsters and escape meteor showers
 
+# Prerequisites :
+You must have pygame and python 3.8 installed to launch this game.
+To install python : https://www.python.org/downloads/
+To install pygame : pip install pygame
+To run it, download "Plateforme" and "Samouraï War" directories. Go in /Plateforme and run ./main.py.
+
 ![accueil_samourai_war](https://user-images.githubusercontent.com/71787594/149625201-dca86f6c-dfe4-481a-ba1b-6d3ba10927a9.PNG)
 
 # Goal of the game:
